@@ -7,9 +7,10 @@
           <div class="form-group">
             <%= f.label :title %>
             <%= f.text_field :title, class: 'form-control' %>
-            <%= f.label :url %>
-            <%= f.text_field :url, class: 'form-control' %>
+            <%= f.label :description %>
+            <%= f.text_area :description, class: 'form-control' %>
             <%= f.file_field :articlecover, placeholder: "画像" %>
+
           </div>
 
           <%= f.submit '投稿', class: 'btn btn-black btn-block' %>

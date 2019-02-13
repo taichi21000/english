@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Express English &mdash; 大学生の英語ブログ</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by freehtml5.co" />
+	<meta name="description" content="English Lerning Website" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="freehtml5.co" />
+	<meta name="Englsih Lerner" content="freehtml5.co" />
 
 	<!--
 	//////////////////////////////////////////////////////
@@ -122,8 +122,8 @@
 <% @articles.each do |article| %>
 <div class="col-md-4">
 	<div class="fh5co-portfolio animate-box">
-		<a href="#">
-			<div class="portfolio-entry" style="background-image: url(images/portfolio-1.jpg);"></div>
+	<%= link_to article_path(id: article.id), method: :get do %>	             
+			<div class="portfolio-entry" style="background-image: url(<%= article.articlecover %>);"></div>
 			<div class="portfolio-text">
 				<h3><%= article.title %></h3>
 				<ul class="stuff">
@@ -132,7 +132,7 @@
 					<li><i class="icon-download3"></i>240</li>
 				</ul>
 			</div>
-		</a>
+		<% end %>
 	</div>
 </div>
 <% end %>
