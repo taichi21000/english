@@ -104,7 +104,12 @@
               	<div class="fh5co-portfolio animate-box">
 
               			<div class="portfolio-entry" style="background-image: url(<%= @article.articlecover %>);"></div>
-              			<div class="portfolio-text">
+
+										<% if @article.articlecover.attached? %>
+										  <%= image_tag @article.articlecover %>
+										<% end %>
+										
+										<div class="portfolio-text">
               				<h3><%= @article.title %></h3>
               				<ul class="stuff">
               					<li><i class="icon-heart2"></i>200</li>
